@@ -1,0 +1,13 @@
+<svg width="220" height="28" viewBox="0 0 230 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- KROSK PARTNERS Institutional Mark (Pure Vector) -->
+  <g id="krosk-emblem" transform="translate(0, 7)">
+    <!-- Left Wing -->
+    <polygon points="0.05,1.72 18.25,1.72 18.25,13.82 16.01,12.37 16.01,6.05 6.17,6.05" fill="#00A86B"/>
+    <!-- Right Wing -->
+    <polygon points="43.95,1.72 25.75,1.72 25.75,13.82 27.99,12.37 27.99,6.05 37.83,6.05" fill="#00A86B"/>
+    <!-- Center Chevron Peak -->
+    <polygon points="22.0,0.18 25.7,7.5 25.7,13.82 22.0,6.68 18.3,13.82 18.3,7.5" fill="#FFFFFF"/>
+  </g>
+  <!-- Wordmark with guaranteed right-margin protection -->
+  <text x="52" y="19.5" font-family="'Space Grotesk', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" letter-spacing="0.03em">KROSK PARTNERS</text>
+</svg>

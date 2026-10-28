@@ -1,0 +1,448 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TeamMemberCard from '../components/TeamMemberCard.astro';
+import { TEAM_MEMBERS } from '../data/team';
+---
+
+<BaseLayout
+  title="About Us | Krosk Partners Limited — Leadership, Governance & Institutional Profile"
+  description="Discover Krosk Partners Limited (KPL), an Associate Member Inter-Dealer Broker operating in the FMDQ OTC ecosystem. Meet our 10 executive leaders and explore our corporate governance and DCL parentage."
+>
+  <!-- =========================================================================
+       PAGE HEADER / INNER HERO
+       ========================================================================= -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="crumb-separator">/</span>
+        <span>Corporate Profile</span>
+      </div>
+
+      <div class="badge-eyebrow gold mb-3">
+        <span class="badge-pill-dot"></span>
+        FMDQ OTC ASSOCIATE MEMBER INTER-DEALER BROKER
+      </div>
+
+      <h1 class="page-title">
+        Bridging Wholesale Liquidity &amp; Market Neutrality
+      </h1>
+
+      <p class="page-subtitle">
+        Krosk Partners Limited (KPL) is a specialized institutional Inter-Dealer Broker operating under the regulatory architecture of the FMDQ OTC Securities Exchange, delivering two-way price discovery and confidential execution for Nigerian capital markets.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       INSTITUTIONAL PEDIGREE & DCL PARENTAGE
+       ========================================================================= -->
+  <section class="about-overview-section">
+    <div class="container">
+      <div class="overview-grid">
+        <!-- Left: Core Institutional Mandate -->
+        <div class="overview-narrative">
+          <div class="badge-eyebrow mb-3">
+            <span class="badge-pill-dot"></span>
+            MARKET INTEGRITY &amp; EXCELLENCE
+          </div>
+
+          <h2 class="overview-title">
+            Connecting Nigeria's Premier Dealing Banks &amp; Buy-Side Asset Managers
+          </h2>
+
+          <p class="lead-para">
+            Operating at the very epicentre of Nigeria's wholesale secondary market, KPL bridges the gap between commercial bank treasuries, discount houses, and institutional fund managers including Pension Fund Administrators (PFAs) and insurance treasuries.
+          </p>
+
+          <p>
+            By strictly upholding pre-trade anonymity and synthesizing continuous two-way quote flow, our registered brokers enable market participants to execute substantial block transactions without destabilizing price slippage or informational leaks.
+          </p>
+
+          <!-- 3 Stats Callout Box -->
+          <div class="pedigree-stats-card glass-card">
+            <div class="pedigree-stat">
+              <span class="stat-num text-gradient-emerald">60+</span>
+              <span class="stat-lbl">Dealing Counterparties</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="pedigree-stat">
+              <span class="stat-num text-gradient-gold">100%</span>
+              <span class="stat-lbl">Pre-Trade Confidentiality</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="pedigree-stat">
+              <span class="stat-num text-gradient-emerald">4</span>
+              <span class="stat-lbl">Active Trading Desks</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Parent Company & Philanthropy -->
+        <div class="overview-parent glass-card" id="parent">
+          <div class="badge-eyebrow gold mb-3">
+            <span class="badge-pill-dot"></span>
+            CORPORATE HOLDING CONGLOMERATE
+          </div>
+
+          <h3 class="parent-heading">A Subsidiary of Drosk Company Limited (DCL)</h3>
+
+          <p class="parent-desc">
+            Krosk Partners Limited operates as the flagship financial-services subsidiary of <strong>Drosk Company Limited (DCL)</strong>, a premier investment holding corporation overseeing high-conviction portfolios across diversified African sectors.
+          </p>
+
+          <div class="foundation-box">
+            <h4 class="foundation-title">Drosk Development Foundation</h4>
+            <p class="foundation-desc">
+              DCL places substantial emphasis on social impact through the Drosk Development Foundation, reflecting our leadership's enduring dedication to empowering local communities and fostering sustainable socioeconomic progress in Nigeria.
+            </p>
+          </div>
+
+          <div class="parent-action">
+            <button type="button" class="btn btn-primary w-full" data-open-rfq data-desk="General Partnership">
+              <span>Partner with KPL</span>
+              <span class="btn-arrow">&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MISSION & VISION STATEMENTS
+       ========================================================================= -->
+  <section class="mission-vision-section">
+    <div class="container">
+      <div class="grid-2">
+        <!-- Mission Card -->
+        <div class="mission-card glass-card">
+          <div class="card-icon">🎯</div>
+          <div class="badge-eyebrow mb-2">OUR GUIDING PURPOSE</div>
+          <h3 class="card-title">Our Mission</h3>
+          <blockquote class="card-quote">
+            &ldquo;We are a premier Associate Member Inter-Dealer Broker driven to deliver the best in financial brokerage services while adding value to our customers, colleagues, and communities we serve.&rdquo;
+          </blockquote>
+        </div>
+
+        <!-- Vision Card -->
+        <div class="mission-card glass-card">
+          <div class="card-icon">🔭</div>
+          <div class="badge-eyebrow gold mb-2">LONG-TERM ASPIRATION</div>
+          <h3 class="card-title">Our Vision</h3>
+          <blockquote class="card-quote">
+            &ldquo;To be a recognized institutional leader and trusted gateway in Africa's Global Financial Market.&rdquo;
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       VERIFIED 10 EXECUTIVE LEADERSHIP TEAM
+       ========================================================================= -->
+  <section class="team-section" id="team">
+    <div class="container-large">
+      <div class="section-header">
+        <div class="badge-eyebrow">
+          <span class="badge-pill-dot"></span>
+          INSTITUTIONAL PEDIGREE &amp; MARKET EXPERTISE
+        </div>
+        <h2 class="section-title">Executive Management &amp; Desk Leadership</h2>
+        <p class="section-subtitle">
+          Led by seasoned capital markets veterans with decades of collective experience structuring fixed income transactions, executing large-block liquidity, and enforcing rigorous risk governance.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        {TEAM_MEMBERS.map((member) => (
+          <TeamMemberCard member={member} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FMDQ REGULATORY RIGOR & COMPLIANCE
+       ========================================================================= -->
+  <section class="governance-section" id="governance">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-eyebrow gold">
+          <span class="badge-pill-dot"></span>
+          FMDQ OTC REGULATORY FRAMEWORK
+        </div>
+        <h2 class="section-title">Governance, Compliance &amp; Market Ethics</h2>
+        <p class="section-subtitle">
+          Krosk Partners Limited operates in strict accordance with the rules and guidelines governing Associate Member Inter-Dealer Brokers.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="governance-card glass-card">
+          <div class="gov-badge">⚖️ ABSOLUTE NEUTRALITY</div>
+          <h3 class="gov-title">No Proprietary Position Taking</h3>
+          <p class="gov-desc">
+            As a pure Inter-Dealer Broker, KPL does not take directional bets or trade on its own account. Our only priority is achieving the optimal execution price for our institutional counterparties without conflict of interest.
+          </p>
+        </div>
+
+        <div class="governance-card glass-card">
+          <div class="gov-badge">🔒 CONFIDENTIALITY</div>
+          <h3 class="gov-title">Strict Information Barriers</h3>
+          <p class="gov-desc">
+            All order flows and pre-trade indications are treated under strict Chinese wall protocols. Trader identities remain anonymous until trade affirmation, preventing front-running on block executions.
+          </p>
+        </div>
+
+        <div class="governance-card glass-card">
+          <div class="gov-badge">📜 AUDITABILITY</div>
+          <h3 class="gov-title">Straight-Through DvP Settlement</h3>
+          <p class="gov-desc">
+            Affirmed trades are instantaneously submitted to FMDQ OTC reporting conduits and routed for Delivery versus Payment (DvP) through the Central Securities Clearing System (CSCS) with zero settlement failures.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: 70px 0 50px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    background: radial-gradient(circle at 50% 0%, rgba(0, 168, 107, 0.08) 0%, transparent 60%);
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-family: var(--font-display);
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+
+  .breadcrumb a {
+    color: var(--text-secondary);
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-gold-light);
+  }
+
+  .crumb-separator {
+    color: rgba(255, 255, 255, 0.2);
+  }
+
+  .mb-2 { margin-bottom: 12px; }
+  .mb-3 { margin-bottom: 18px; }
+
+  .page-title {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    margin-bottom: 18px;
+  }
+
+  .page-subtitle {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 820px;
+    color: var(--text-secondary);
+  }
+
+  /* About Overview */
+  .about-overview-section {
+    padding: 90px 0;
+  }
+
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.85fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .overview-title {
+    font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .lead-para {
+    font-size: 1.12rem;
+    line-height: 1.75;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+  }
+
+  .pedigree-stats-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px 28px;
+    margin-top: 36px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    background: #FFFFFF;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  }
+
+  .pedigree-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: var(--font-hero);
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-lbl {
+    font-size: 0.78rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 42px;
+    background: var(--border-subtle);
+  }
+
+  .overview-parent {
+    padding: 38px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #FFFFFF;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  .parent-heading {
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+  }
+
+  .parent-desc {
+    font-size: 0.96rem;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  .foundation-box {
+    padding: 20px;
+    border-radius: var(--radius-md);
+    background: #F8FAFC;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: 28px;
+  }
+
+  .foundation-title {
+    font-size: 1.1rem;
+    color: var(--color-gold-dark);
+    margin-bottom: 8px;
+  }
+
+  .foundation-desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  /* Mission Vision */
+  .mission-vision-section {
+    padding-bottom: 80px;
+  }
+
+  .mission-card {
+    padding: 40px;
+  }
+
+  .card-icon {
+    font-size: 2.4rem;
+    margin-bottom: 14px;
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+  }
+
+  .card-quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--text-primary);
+    border-left: 3px solid var(--color-emerald);
+    padding-left: 18px;
+  }
+
+  /* Team Grid */
+  .team-section {
+    padding: 80px 0 100px 0;
+    background: #F5F5F7;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 28px;
+  }
+
+  /* Governance Section */
+  .governance-section {
+    padding: 100px 0;
+  }
+
+  .governance-card {
+    padding: 32px;
+  }
+
+  .gov-badge {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--color-gold-dark);
+    margin-bottom: 14px;
+  }
+
+  .gov-title {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+  }
+
+  .gov-desc {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .w-full {
+    width: 100%;
+    justify-content: center;
+  }
+
+  @media (max-width: 991px) {
+    .overview-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .pedigree-stats-card {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .stat-divider {
+      width: 70%;
+      height: 1px;
+    }
+  }
+</style>

@@ -1,0 +1,475 @@
+---
+interface Props {
+  isStandalone?: boolean;
+}
+
+const { isStandalone = false } = Astro.props;
+---
+
+<div class={`calculator-container ${isStandalone ? 'standalone' : ''}`}>
+  <div class="calculator-card glass-card">
+    <!-- Header -->
+    <div class="calc-header">
+      <div>
+        <div class="badge-eyebrow gold">
+          <span class="badge-pill-dot"></span>
+          FMDQ BENCHMARK MATHEMATICS
+        </div>
+        <h2 class="calc-title">Institutional Yield &amp; Settlement Simulator</h2>
+        <p class="calc-desc">
+          Simulate real-time purchase consideration, implied discount returns, and effective annual yields across Nigerian Treasury Bills, Commercial Papers, and FGN Benchmark Bonds based on authentic OTC conventions.
+        </p>
+      </div>
+
+      <!-- Mode Switcher Tabs -->
+      <div class="calc-tabs">
+        <button type="button" class="calc-tab active" id="calcTabTBills">
+          <span class="tab-icon">📜</span>
+          <span>T-Bills &amp; CPs (Discount)</span>
+        </button>
+        <button type="button" class="calc-tab" id="calcTabBonds">
+          <span class="tab-icon">🏛️</span>
+          <span>FGN &amp; Eurobonds (Coupon)</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Simulator Layout Grid: Inputs Left, Live Results Card Right -->
+    <div class="calc-grid">
+      <!-- Input Controls Side -->
+      <div class="calc-inputs-side">
+        <!-- Form 1: T-Bills / Commercial Papers -->
+        <form id="formTBills" class="calc-form" onsubmit="return false;">
+          <div class="form-group">
+            <div class="label-with-val">
+              <label for="tbFaceVal" class="form-label">Nominal Face Value (Par)</label>
+              <span class="currency-tag">NGN (₦)</span>
+            </div>
+            <input
+              type="number"
+              id="tbFaceVal"
+              class="form-input"
+              value="100000000"
+              step="5000000"
+              min="1000000"
+            />
+            <div class="input-quick-pills">
+              <button type="button" class="quick-pill" onclick="document.getElementById('tbFaceVal').value='50000000'; document.getElementById('tbFaceVal').dispatchEvent(new Event('input'))">₦50M</button>
+              <button type="button" class="quick-pill" onclick="document.getElementById('tbFaceVal').value='100000000'; document.getElementById('tbFaceVal').dispatchEvent(new Event('input'))">₦100M</button>
+              <button type="button" class="quick-pill" onclick="document.getElementById('tbFaceVal').value='250000000'; document.getElementById('tbFaceVal').dispatchEvent(new Event('input'))">₦250M</button>
+              <button type="button" class="quick-pill" onclick="document.getElementById('tbFaceVal').value='500000000'; document.getElementById('tbFaceVal').dispatchEvent(new Event('input'))">₦500M</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="label-with-val">
+              <label for="tbDiscountRate" class="form-label">Quoted Discount Rate (%)</label>
+              <span id="rateDisplay" class="rate-badge">21.50%</span>
+            </div>
+            <input
+              type="range"
+              id="tbDiscountRange"
+              class="form-range"
+              min="12.00"
+              max="28.00"
+              step="0.05"
+              value="21.50"
+            />
+            <input
+              type="number"
+              id="tbDiscountRate"
+              class="form-input mt-2"
+              step="0.05"
+              value="21.50"
+              min="1.0"
+              max="50.0"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="tbDays" class="form-label">Benchmark Tenor / Days to Maturity</label>
+            <select id="tbDays" class="form-select">
+              <option value="91">91-Day Sovereign Bill (Quarterly Liquidity)</option>
+              <option value="182" selected>182-Day Sovereign Bill (Semi-Annual)</option>
+              <option value="270">270-Day Prime Corporate Commercial Paper</option>
+              <option value="364">364-Day Benchmark Sovereign Bill (1 Year)</option>
+            </select>
+          </div>
+        </form>
+
+        <!-- Form 2: FGN Bonds & Eurobonds -->
+        <form id="formBonds" class="calc-form" style="display: none;" onsubmit="return false;">
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="bondCurrency" class="form-label">Denomination Currency</label>
+              <select id="bondCurrency" class="form-select">
+                <option value="NGN" selected>Naira (₦) — FGN Benchmark Bonds</option>
+                <option value="USD">USD ($) — Sovereign Eurobonds</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="bondTenor" class="form-label">Tenor to Maturity</label>
+              <select id="bondTenor" class="form-select">
+                <option value="2">2-Year Short Bond</option>
+                <option value="3">3-Year FGN Benchmark</option>
+                <option value="5" selected>5-Year Belly Benchmark</option>
+                <option value="10">10-Year Benchmark</option>
+                <option value="20">20-Year Long Duration</option>
+                <option value="30">30-Year Ultra Long</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="bondFaceVal" class="form-label">Face Value (Par Nominal)</label>
+            <input
+              type="number"
+              id="bondFaceVal"
+              class="form-input"
+              value="100000000"
+              step="5000000"
+              min="1000000"
+            />
+          </div>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="bondCoupon" class="form-label">Annual Coupon Rate (%)</label>
+              <input
+                type="number"
+                id="bondCoupon"
+                class="form-input"
+                step="0.05"
+                value="14.50"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="bondYTM" class="form-label">Target Yield to Maturity (YTM %)</label>
+              <input
+                type="number"
+                id="bondYTM"
+                class="form-input"
+                step="0.05"
+                value="20.25"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">YTM Sensitivity Slider</label>
+            <input
+              type="range"
+              id="bondYTMRange"
+              class="form-range"
+              min="8.00"
+              max="26.00"
+              step="0.05"
+              value="20.25"
+            />
+          </div>
+        </form>
+      </div>
+
+      <!-- Live Calculation Results Side Card -->
+      <div class="calc-results-side">
+        <div class="results-card">
+          <!-- Primary KPI Header -->
+          <div class="kpi-header">
+            <div class="kpi-sub" id="calcKpiLabel">EFFECTIVE ANNUAL TRUE YIELD (EY)</div>
+            <div class="kpi-val text-gradient-emerald" id="calcKpiMetric">24.08%</div>
+          </div>
+
+          <!-- Structured Metrics Breakdown -->
+          <div class="metrics-breakdown">
+            <div class="metric-row">
+              <span class="metric-label">Estimated Settlement Consideration</span>
+              <span class="metric-val highlight-gold" id="calcMetricConsideration">₦ 89,130,556</span>
+            </div>
+
+            <div class="metric-row">
+              <span class="metric-label">Upfront Discount Earned / Coupon Flow</span>
+              <span class="metric-val" id="calcMetricDiscount">₦ 10,869,444</span>
+            </div>
+
+            <div class="metric-row">
+              <span class="metric-label">Maturity Face Value (Par)</span>
+              <span class="metric-val" id="calcMetricPar">₦ 100,000,000</span>
+            </div>
+
+            <div class="metric-row">
+              <span class="metric-label">Tenor &amp; Day-Count Basis</span>
+              <span class="metric-val" id="calcMetricTenor">182 Days (Actual/365 Basis)</span>
+            </div>
+          </div>
+
+          <!-- Direct Execution Trigger Button -->
+          <div class="calc-action-wrap">
+            <button
+              type="button"
+              class="btn btn-emerald w-full"
+              id="calcExecuteBtn"
+            >
+              <span>Execute this Run via RFQ</span>
+              <span class="btn-arrow">&rarr;</span>
+            </button>
+            <span class="calc-note">
+              * Indicative dealer simulation. Final settlement affirmed via FMDQ OTC trading terminal.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { initCalculatorDom } from '../scripts/calculator';
+  document.addEventListener('DOMContentLoaded', initCalculatorDom);
+</script>
+
+<style>
+  .calculator-container {
+    width: 100%;
+  }
+
+  .calculator-card {
+    padding: 44px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #FFFFFF;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border-radius: var(--radius-xl);
+  }
+
+  .calc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+  }
+
+  .calc-title {
+    margin-top: 10px;
+    margin-bottom: 8px;
+    font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+    color: var(--text-primary);
+  }
+
+  .calc-desc {
+    max-width: 660px;
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+  }
+
+  .calc-tabs {
+    display: flex;
+    gap: 8px;
+    background: #F5F5F7;
+    padding: 6px;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .calc-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: var(--radius-full);
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .calc-tab:hover {
+    color: var(--text-primary);
+  }
+
+  .calc-tab.active {
+    background: #FFFFFF;
+    color: var(--color-emerald-deep);
+    border: 1px solid rgba(0, 168, 107, 0.25);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .calc-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 36px;
+    align-items: stretch;
+  }
+
+  .label-with-val {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .currency-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+    color: var(--color-gold-dark);
+  }
+
+  .rate-badge {
+    font-size: 0.9rem;
+    font-weight: 800;
+    font-family: var(--font-display);
+    color: var(--color-emerald-deep);
+  }
+
+  .input-quick-pills {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .quick-pill {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+    border-radius: var(--radius-sm);
+    background: #F5F5F7;
+    border: 1px solid #E2E8F0;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .quick-pill:hover {
+    background: #E8F8F1;
+    color: var(--color-emerald-deep);
+    border-color: rgba(0, 168, 107, 0.3);
+  }
+
+  .form-range {
+    width: 100%;
+    height: 6px;
+    border-radius: 4px;
+    background: #E2E8F0;
+    outline: none;
+    cursor: pointer;
+    accent-color: var(--color-emerald);
+    margin-top: 10px;
+  }
+
+  .mt-2 {
+    margin-top: 8px;
+  }
+
+  .results-card {
+    background: #F8FAFC;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  }
+
+  .kpi-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .kpi-sub {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  .kpi-val {
+    font-family: var(--font-hero);
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 6px;
+    color: var(--text-primary);
+  }
+
+  .metrics-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .metric-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+  }
+
+  .metric-label {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+  }
+
+  .metric-val {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .highlight-gold {
+    color: var(--color-gold-dark);
+  }
+
+  .calc-action-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .calc-note {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  @media (max-width: 900px) {
+    .calculator-card {
+      padding: 24px 20px;
+    }
+    .calc-grid {
+      grid-template-columns: 1fr;
+    }
+    .calc-header {
+      flex-direction: column;
+    }
+    .calc-tabs {
+      width: 100%;
+      flex-direction: column;
+      border-radius: var(--radius-md);
+    }
+    .calc-tab {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+</style>

@@ -1,0 +1,184 @@
+---
+import type { TradingDesk } from '../data/desks';
+
+interface Props {
+  desk: TradingDesk;
+}
+
+const { desk } = Astro.props;
+---
+
+<div class="desk-card glass-card interactive" id={`desk-${desk.id}`}>
+  <div class="desk-top">
+    <div class="desk-number-wrap">
+      <span class="desk-num">DESK {desk.number}</span>
+      <span class="badge-eyebrow">FMDQ AFFIRMED</span>
+    </div>
+    <h3 class="desk-title">{desk.title}</h3>
+    <p class="desk-tagline">{desk.tagline}</p>
+  </div>
+
+  <p class="desk-desc">{desk.description}</p>
+
+  <div class="desk-specs-grid">
+    <div class="desk-spec-item">
+      <span class="spec-label">Settlement</span>
+      <span class="spec-val text-gradient-emerald">{desk.settlement}</span>
+    </div>
+    <div class="desk-spec-item">
+      <span class="spec-label">Min Lot Size</span>
+      <span class="spec-val">{desk.minLotSize}</span>
+    </div>
+    <div class="desk-spec-item">
+      <span class="spec-label">Execution Mode</span>
+      <span class="spec-val">{desk.executionMode}</span>
+    </div>
+    <div class="desk-spec-item">
+      <span class="spec-label">Counterparties</span>
+      <span class="spec-val">{desk.counterparties}</span>
+    </div>
+  </div>
+
+  <div class="desk-instruments">
+    <span class="inst-label">Active Market Instruments:</span>
+    <ul class="inst-list">
+      {desk.instruments.map((inst) => (
+        <li>{inst}</li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="desk-action">
+    <button
+      type="button"
+      class="btn btn-primary w-full"
+      data-open-rfq
+      data-desk={desk.rfqDeskName}
+    >
+      <span>Request {desk.title} Quote</span>
+      <span class="btn-arrow">&rarr;</span>
+    </button>
+  </div>
+</div>
+
+<style>
+  .desk-card {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: var(--radius-lg);
+  }
+
+  .desk-top {
+    margin-bottom: 18px;
+  }
+
+  .desk-number-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .desk-num {
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--color-gold-dark);
+  }
+
+  .desk-title {
+    font-size: 1.55rem;
+    margin-bottom: 6px;
+    line-height: 1.2;
+    color: var(--text-primary);
+  }
+
+  .desk-tagline {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-emerald-deep);
+  }
+
+  .desk-desc {
+    font-size: 0.94rem;
+    line-height: 1.65;
+    margin-bottom: 24px;
+    color: var(--text-secondary);
+  }
+
+  .desk-specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 16px;
+    background: #F5F5F7;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+  }
+
+  .desk-spec-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .spec-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+
+  .spec-val {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .desk-instruments {
+    margin-bottom: 24px;
+  }
+
+  .inst-label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    font-family: var(--font-display);
+    margin-bottom: 8px;
+  }
+
+  .inst-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .inst-list li {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .inst-list li::before {
+    content: '•';
+    color: var(--color-emerald);
+    font-size: 1.2rem;
+    line-height: 0;
+  }
+
+  .w-full {
+    width: 100%;
+    justify-content: center;
+  }
+</style>

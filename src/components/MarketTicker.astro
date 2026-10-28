@@ -1,0 +1,40 @@
+---
+import { MARKET_DATA } from '../data/marketData';
+---
+
+<div class="market-ticker-bar" aria-label="Live OTC Benchmark Ticker">
+  <div class="ticker-wrapper">
+    <!-- Live Market WAT Clock -->
+    <div class="ticker-clock" id="lagosMarketClock">
+      <span class="live-dot"></span>
+      <span>LAGOS: --:--:-- WAT</span>
+      <span style="color: rgba(0, 0, 0, 0.15);">|</span>
+      <span style="font-weight: 700; color: var(--color-emerald-light);">OTC MARKET</span>
+    </div>
+
+    <!-- Ticker Track with loop duplicate -->
+    <div class="ticker-marquee">
+      <div class="ticker-track">
+        {MARKET_DATA.map((quote) => (
+          <div class="ticker-item">
+            <span class="ticker-instrument">{quote.code}</span>
+            <span class="ticker-yield">{quote.yieldVal}</span>
+            <span class={`ticker-change ${quote.dir}`}>
+              {quote.dir === 'up' ? '▲' : quote.dir === 'down' ? '▼' : '■'} {quote.change}
+            </span>
+          </div>
+        ))}
+        {/* Loop duplication for infinite CSS marquee */}
+        {MARKET_DATA.map((quote) => (
+          <div class="ticker-item" aria-hidden="true">
+            <span class="ticker-instrument">{quote.code}</span>
+            <span class="ticker-yield">{quote.yieldVal}</span>
+            <span class={`ticker-change ${quote.dir}`}>
+              {quote.dir === 'up' ? '▲' : quote.dir === 'down' ? '▼' : '■'} {quote.change}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>

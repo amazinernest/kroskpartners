@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import YieldCalculator from '../components/YieldCalculator.astro';
+---
+
+<BaseLayout
+  title="Yield & Settlement Calculator | Krosk Partners Limited — FMDQ OTC Pricing Simulator"
+  description="Calculate purchase consideration, upfront discount returns, and effective annual true yield (EY) across Nigerian Treasury Bills, Commercial Papers, and FGN Benchmark Bonds."
+>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="crumb-separator">/</span>
+        <span>Dealer Simulator</span>
+      </div>
+
+      <div class="badge-eyebrow gold mb-3">
+        <span class="badge-pill-dot"></span>
+        INSTITUTIONAL PRICING ENGINE
+      </div>
+
+      <h1 class="page-title">
+        Fixed Income Yield &amp; Settlement Simulator
+      </h1>
+
+      <p class="page-subtitle">
+        Empowering institutional treasurers, PFA fund managers, and bank dealing desks to compute accurate consideration, implied return, and true yield based on FMDQ OTC secondary market conventions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Calculator Engine Section -->
+  <section class="calculator-app-section">
+    <div class="container-large">
+      <YieldCalculator isStandalone={true} />
+    </div>
+  </section>
+
+  <!-- Financial Mathematics & Conventions Reference -->
+  <section class="math-conventions-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-eyebrow">
+          <span class="badge-pill-dot"></span>
+          FMDQ OTC BENCHMARK CONVENTIONS
+        </div>
+        <h2 class="section-title">Standard Capital Markets Mathematics</h2>
+        <p class="section-subtitle">
+          Our calculator adheres strictly to the FMDQ OTC Securities Exchange calculation standards governing money market discount paper and coupon-bearing sovereign debt.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="formula-card glass-card">
+          <div class="formula-badge">DISCOUNT INSTRUMENTS (T-BILLS &amp; CPS)</div>
+          <h3 class="formula-title">Discount Price &amp; Effective True Yield Formula</h3>
+          
+          <div class="formula-box">
+            <code>Price per 100 = 100 - (Discount Rate &times; Tenor Days / 360)</code>
+            <code>Consideration = Face Value &times; (Price / 100)</code>
+            <code>True Yield (EY %) = (Discount / Consideration) &times; (365 / Days) &times; 100</code>
+          </div>
+
+          <p class="formula-desc">
+            Nigerian Treasury Bills and Commercial Papers trade on an annualized discount rate using a 360-day money market year convention. However, the true annualized economic return (True Yield) to the investor is computed on an Actual/365-day basis against the net capital outlay (consideration).
+          </p>
+        </div>
+
+        <div class="formula-card glass-card">
+          <div class="formula-badge gold">COUPON BONDS (FGN &amp; EUROBONDS)</div>
+          <h3 class="formula-title">Semi-Annual Clean Price &amp; YTM Formula</h3>
+          
+          <div class="formula-box">
+            <code>Price = &sum; [ (C / 2) / (1 + YTM/2)^t ] + [ Par / (1 + YTM/2)^2n ]</code>
+            <code>Clean Consideration = Face Value &times; (Clean Price / 100)</code>
+          </div>
+
+          <p class="formula-desc">
+            Federal Government of Nigeria (FGN) Bonds pay fixed semi-annual coupons on an Actual/Actual day-count basis. Sovereign Eurobonds pay semi-annual coupons on a 30/360-day count basis in United States Dollars (USD).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: 70px 0 50px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    background: radial-gradient(circle at 50% 0%, rgba(0, 168, 107, 0.08) 0%, transparent 60%);
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-family: var(--font-display);
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+
+  .breadcrumb a {
+    color: var(--text-secondary);
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-gold-light);
+  }
+
+  .crumb-separator {
+    color: rgba(0, 0, 0, 0.25);
+  }
+
+  .mb-3 { margin-bottom: 18px; }
+
+  .page-title {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    margin-bottom: 18px;
+  }
+
+  .page-subtitle {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 820px;
+    color: var(--text-secondary);
+  }
+
+  .calculator-app-section {
+    padding: 70px 0 90px 0;
+  }
+
+  .math-conventions-section {
+    padding: 80px 0 100px 0;
+    background: #F5F5F7;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .formula-card {
+    padding: 36px;
+  }
+
+  .formula-badge {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--color-emerald-deep);
+    margin-bottom: 12px;
+  }
+
+  .formula-badge.gold {
+    color: var(--color-gold-dark);
+  }
+
+  .formula-title {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+
+  .formula-box {
+    background: #F8FAFC;
+    border: 1px dashed rgba(0, 135, 90, 0.35);
+    border-radius: var(--radius-md);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .formula-card:nth-child(2) .formula-box {
+    border-color: rgba(180, 83, 9, 0.35);
+  }
+
+  .formula-box code {
+    font-family: monospace;
+    font-size: 0.88rem;
+    color: var(--color-gold-dark);
+    font-weight: 600;
+  }
+
+  .formula-desc {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+  }
+</style>

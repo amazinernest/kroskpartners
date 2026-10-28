@@ -1,0 +1,119 @@
+---
+import type { TeamMember } from '../data/team';
+
+interface Props {
+  member: TeamMember;
+}
+
+const { member } = Astro.props;
+---
+
+<div class="team-card glass-card">
+  <div class="team-img-wrapper">
+    <img
+      src={member.image}
+      alt={member.name}
+      class="team-img"
+      loading="lazy"
+      width="340"
+      height="380"
+    />
+    <div class="team-overlay"></div>
+    <div class="team-category-badge">
+      <span>{member.category}</span>
+    </div>
+  </div>
+
+  <div class="team-info">
+    <h3 class="team-name">{member.name}</h3>
+    <div class="team-role">{member.role}</div>
+    <p class="team-bio">{member.bio}</p>
+  </div>
+</div>
+
+<style>
+  .team-card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-lg);
+    transition: transform var(--transition-base), border-color var(--transition-base);
+  }
+
+  .team-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--border-gold);
+  }
+
+  .team-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 4.6;
+    background: #F5F5F7;
+    overflow: hidden;
+  }
+
+  .team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform var(--transition-smooth);
+  }
+
+  .team-card:hover .team-img {
+    transform: scale(1.05);
+  }
+
+  .team-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, transparent 40%);
+  }
+
+  .team-category-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-gold-dark);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .team-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .team-name {
+    font-size: 1.35rem;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+  }
+
+  .team-role {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-emerald-deep);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .team-bio {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+</style>

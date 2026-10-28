@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Market Intelligence &amp; Research | Krosk Partners Limited — FMDQ Macro Commentaries</title>
+  <meta name="description" content="Proprietary fixed income market commentaries and macro analysis by CEO Olushola Adeniyi and KPL brokers covering FMDQ yields, DMO auctions, and liquidity dynamics."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta property="og:title" content="Market Intelligence | Krosk Partners Limited"/>
+  <meta property="og:description" content="Proprietary fixed income research and macro commentaries by Nigerian Inter-Dealer Broker Olushola Adeniyi."/>
+  <meta property="og:type" content="website"/>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/brand/favicon.png" type="image/png"/>
+  <link rel="apple-touch-icon" href="assets/images/brand/favicon.png"/>
+
+  <!-- Google Fonts: Antonio & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
+
+  <!-- Main Stylesheet -->
+  <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+  <!-- =========================================================================
+       SECTION 1: NAVBAR (Digitency Style with Crisp Vector Brand Logo)
+       ========================================================================= -->
+  <section class="rt-navbar">
+    <div class="navbar w-nav">
+      <div class="rt-navber-wrap">
+        
+        <!-- Left: Prominent Brand Logo Lockup -->
+        <div class="rt-navbar-brand-wrap">
+          <a href="index.html" class="krosk-nav-logo" aria-label="Krosk Partners Home">
+            <img src="assets/images/brand/krosk-logo-dark.svg" alt="Krosk Partners Limited Logo" class="krosk-nav-logo-img" width="340" height="52"/>
+          </a>
+        </div>
+
+        <!-- Center: Desktop Navigation (Shortened, Clean & Streamlined) -->
+        <nav role="navigation" class="rt-nav-menu" id="primaryNavMenu">
+          <a href="index.html" class="rt-nav-link">Home</a>
+          <a href="about.html" class="rt-nav-link">About</a>
+          <a href="services.html" class="rt-nav-link">Services</a>
+          <a href="insights.html" class="rt-nav-link active">Insights</a>
+          <a href="contact.html" class="rt-nav-link">Contact</a>
+          <div class="rt-mobile-nav-actions">
+            <a href="tel:+2348038018023" class="rt-mobile-call-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+234 803 801 8023</span>
+            </a>
+            <button type="button" class="rt-button" data-open-rfq data-desk="Fixed Income" style="width: 100%; justify-content: center; padding: 13px 20px;">
+              <div class="rt-overflow-hidden">
+                <div class="rt-button-text-wrap">
+                  <div class="rt-button-text">Request RFQ</div>
+                </div>
+              </div>
+              <img width="12" height="10" alt="arrow" src="assets/images/icons/680f17927db74a5da7dc5da5_Arrow 6 (1).svg" class="rt-button-arrow"/>
+            </button>
+          </div>
+        </nav>
+
+        <!-- Right: Direct Phone Pill & Request RFQ Button -->
+        <div class="rt-navbar-right-part" style="display: flex; align-items: center; gap: 14px;">
+          <!-- Direct Phone Pill Button -->
+          <a href="tel:+2348038018023" class="rt-nav-contact-main" aria-label="Call Trading Floor Direct">
+            <div class="rt-nav-contact-icon">
+              <img src="assets/images/icons/6837e6f3c71f9243c1cd9d48_phone-call.svg" width="18" height="18" alt="Phone"/>
+            </div>
+            <div class="rt-overflow-hidden">
+              <div class="nav-contact-text">
+                <span>+234 803 801 8023</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Yellow Pill Action Button -->
+          <button type="button" class="rt-button" data-open-rfq data-desk="Research Insights" style="padding: 10px 20px; font-size: 13.5px; border-radius: 100px;">
+            <div class="rt-overflow-hidden">
+              <div class="rt-button-text-wrap">
+                <div class="rt-button-text">Request RFQ</div>
+              </div>
+            </div>
+            <img width="12" height="10" alt="arrow" src="assets/images/icons/680f17927db74a5da7dc5da5_Arrow 6 (1).svg" class="rt-button-arrow"/>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <div class="rt-menu-button-main" id="mobileNavToggle" aria-label="Toggle Mobile Menu" role="button" tabindex="0">
+            <div class="rt-mobile-menu-button-line rt-top-line"></div>
+            <div class="rt-mobile-menu-button-line middile-line change"></div>
+            <div class="rt-mobile-menu-button-line bottom-line"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 2: INNER HERO (Digitency Warm Dark & Antonio Typography)
+       ========================================================================= -->
+  <section class="rt-inner-hero">
+    <div class="rt-inner-hero-container">
+      <div class="rt-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Market Intelligence</span>
+      </div>
+
+      <div class="rt-inner-badge">
+        <span>●</span>
+        <span>TRADING FLOOR RESEARCH &amp; MACRO COMMENTARIES</span>
+      </div>
+
+      <div class="rt-inner-hero-title-wrap">
+        <h1 class="rt-inner-hero-title">Fixed Income Intelligence</h1>
+        <div class="rt-hero-arrow-box" style="width: 54px; height: 54px; background-color: var(--color--golden-sun); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+          <img width="24" height="24" alt="arrow" src="assets/images/icons/680f17927db74a5da7dc5d9c_Vector 1016.svg"/>
+        </div>
+      </div>
+
+      <p class="rt-inner-hero-subtitle">
+        Proprietary tactical analysis on Debt Management Office (DMO) bond issuances, monetary policy rate hikes, yield curve steepeners, and cash liquidity dynamics across Nigeria.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 3: PARTNER TICKER MARQUEE
+       ========================================================================= -->
+  <section class="rt-founders rt-inner-ticker" style="background-color: #040A14 !important; border-top: 1px solid rgba(255, 193, 7, 0.3) !important; border-bottom: 1px solid rgba(255, 193, 7, 0.3) !important;">
+    <div class="rt-marquee-content" style="padding: 18px 0; background-color: #040A14 !important;">
+      <div class="rt-marquee-text-main">
+        <div class="rt-marquee-text-block">TACTICAL FIXED INCOME RESEARCH &bull; SOVEREIGN YIELD DYNAMICS &bull; CRR DEBIT FORECASTS &bull; DMO AUCTION STRATEGY &bull; MACRO COMMENTARIES &bull; OLUSHOLA ADENIYI (IDB) &bull;&nbsp;</div>
+      </div>
+      <div class="rt-marquee-text-main" aria-hidden="true">
+        <div class="rt-marquee-text-block">TACTICAL FIXED INCOME RESEARCH &bull; SOVEREIGN YIELD DYNAMICS &bull; CRR DEBIT FORECASTS &bull; DMO AUCTION STRATEGY &bull; MACRO COMMENTARIES &bull; OLUSHOLA ADENIYI (IDB) &bull;&nbsp;</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 4: VERIFIED RESEARCH ARTICLES ARCHIVE
+       ========================================================================= -->
+  <section class="rt-inner-section">
+    <div class="rt-inner-hero-container">
+      
+      <!-- Article 1: Money Bags -->
+      <article class="rt-article-card" id="money-bags">
+        <div class="rt-article-header">
+          <div>
+            <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 6px;">
+              <span style="display: inline-block; padding: 4px 12px; background: #081426; color: #FFE754; border-radius: 100px; font-family: 'Antonio', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">
+                Finance and Investing
+              </span>
+              <span style="font-size: 13px; color: #475569; text-transform: uppercase;">Fixed Income Desk</span>
+            </div>
+            <h2 class="rt-article-title">Money Bags</h2>
+          </div>
+          <div style="text-align: right; font-size: 13.5px; color: #475569;">
+            <div>By <strong style="color: #081426; font-weight: 700;">Olushola Adeniyi</strong></div>
+            <div style="color: #48bb78; font-weight: 600;">Inter-Dealer Broker</div>
+            <time datetime="2023-07-05" style="color: #64748B; font-size: 12px;">Published July 5, 2023</time>
+          </div>
+        </div>
+
+        <div class="rt-article-body">
+          <div class="rt-pull-quote">
+            &ldquo;No matter the stochastic belly of the curve analysis done in this market, the truth is we will remain bid, there is more money than instruments.&rdquo;
+          </div>
+
+          <p style="margin-bottom: 18px;">
+            We are definitely done with borrowing for this year now!!! Oh, maybe we are borrowing from now for next year’s budget!!! The 50s are almost out of supply, so I need to buy duration now!!! There might be no more issuance of the 50s as they have done 930bn!!! The 26s look cheap vs the rest of the curve so I can use them to pick some short-end yield!!! When I stock my house with the finest whiskey ahead of a potential FX devaluation, it’s because I have the cash. I probably would have still bought what was needed if prices went up or down. No matter the stochastic belly of the curve analysis done in this market, the truth is we will remain bid, there is more money than instruments.
+          </p>
+
+          <p style="margin-bottom: 18px;">
+            Wednesday auction saw the DMO continue its trend of overselling which matches our theory that the deficit was more than needed and we are still aggressive borrowers as a nation. We expect this trend to continue till the end of the year with about another 1trn still needed before the end of the year. We think the market has the money and the DMO won’t have a problem with bids.
+          </p>
+
+          <p style="margin-bottom: 18px;">
+            The question remains value and where we see long-term rates ahead of much more aggressive borrowing plan next year. The sale on the 26s to 11.65 from a MTM of around 11% was very interesting and truly there is value there for someone that’s been aggressively buying at 11% and below pre-auction given it was trading at 10.40 before addition to the auction calendar. On the bond curve, this has the most value in our view.
+          </p>
+
+          <p style="margin-bottom: 18px;">
+            Short-duration pair trades continue to look attractive going into the end of the year given our bearish view. We had advised some short 50s vs long 36s at around 10-15bps which has opened to around 35bps and we think that is where value exists. A relative yield pair trade is a short 45s or 49s vs long 50s, another interesting trade we think will make long term money, but we think repo on those 45s and 49s are tough to find given the market is net short and the technical might make it hard to realize the profit. But even in a rally, the 45s get to around 12 where there are loads of sellers and 50s will be a profit king if that happens.
+          </p>
+
+          <p style="margin-bottom: 24px;">
+            Let me end my ranting. We believe yields will have an upward trend at some point this year, issuance of a new bond to replace the 50s, a market realization that bonds will continue to be oversold, money market remaining at 14% or even going higher as the CBN continues to supply $$$ to corporates. Money bags is/are not limitless. It will be a very interesting end to the year, please wear your seatbelts tight, it’s a bumpy ride.
+          </p>
+
+          <div style="font-family: 'Antonio', sans-serif; font-size: 16px; font-weight: 700; color: #086430; text-transform: uppercase;">
+            Good luck trading.<br/>
+            Olushola Adeniyi &mdash; Inter-Dealer Broker
+          </div>
+        </div>
+      </article>
+
+
+      <!-- Article 2: NGN Deficit 101, 102, 103 -->
+      <article class="rt-article-card" id="ngn-deficit">
+        <div class="rt-article-header">
+          <div>
+            <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 6px;">
+              <span style="display: inline-block; padding: 4px 12px; background: #081426; color: #FFE754; border-radius: 100px; font-family: 'Antonio', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">
+                Fiscal &amp; Debt Analysis
+              </span>
+              <span style="font-size: 13px; color: #475569; text-transform: uppercase;">Sovereign Borrowing Window</span>
+            </div>
+            <h2 class="rt-article-title">NGN Deficit 101, 102, 103</h2>
+          </div>
+          <div style="text-align: right; font-size: 13.5px; color: #475569;">
+            <div>By <strong style="color: #081426; font-weight: 700;">Olushola Adeniyi</strong></div>
+            <div style="color: #48bb78; font-weight: 600;">Inter-Dealer Broker</div>
+            <time datetime="2023-07-05" style="color: #64748B; font-size: 12px;">Published July 5, 2023</time>
+          </div>
+        </div>
+
+        <div class="rt-article-body">
+          <div class="rt-pull-quote">
+            &ldquo;Please let me refer you to page 16 of the prospectus where all our analysis broke down... While we are expecting another NGN450bn left to issue this year, the number seems to be another NGN1.40trn left to borrow.&rdquo;
+          </div>
+
+          <p style="margin-bottom: 18px;">
+            Since the last NGN bond issuance, we have been spending some time to understand why DMO, by our calculations having very little debt left to issue this year continues to remain aggressive in the borrowing window. Our first thought was to do with the FOMC in the US and their possible rate hike or insinuation, of which we previously wrote our views. However, with a long 9hr road-trip ahead of me and time to kill, I decided to read more around this Euro-bond prospectus provided ahead of the last month issuance.
+          </p>
+
+          <p style="margin-bottom: 18px;">
+            Please let me refer you to page 16 of the prospectus where all our analysis broke down. Into the year, we had a NGN4.6trn budget deficit, we had a NGN1trn supplementary budget passed, taking us to NGN5.6trn deficit. However, on page 16, we have a NGN6.449trn deficit. Is this a typo error? Well, I tried to put the revenue and expenditure on excel and still got the same NGN6.449trn.
+          </p>
+
+          <p style="margin-bottom: 24px;">
+            So what does this mean? So while me and my learned colleagues are busy expecting another NGN450bn left to issue this year, the number seems to be another NGN1.40trn left to borrow. Yes we have raised an extra $1bn from the Euro-bond and we might tap it again, but we definitely have a lot more to borrow than we thought. At this point I will leave the analysis of the market to the more capable and studious minds.
+          </p>
+
+          <div style="font-family: 'Antonio', sans-serif; font-size: 16px; font-weight: 700; color: #086430; text-transform: uppercase;">
+            Good luck trading.<br/>
+            Olushola Adeniyi &mdash; Inter-Dealer Broker
+          </div>
+        </div>
+      </article>
+
+
+      <!-- Article 3: Market Hangover (Part 1) -->
+      <article class="rt-article-card" id="market-hangover">
+        <div class="rt-article-header">
+          <div>
+            <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 6px;">
+              <span style="display: inline-block; padding: 4px 12px; background: #081426; color: #FFE754; border-radius: 100px; font-family: 'Antonio', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">
+                Market Structure
+              </span>
+              <span style="font-size: 13px; color: #475569; text-transform: uppercase;">Maturity &amp; Coupon Cycles</span>
+            </div>
+            <h2 class="rt-article-title">Market Hangover (Part 1)</h2>
+          </div>
+          <div style="text-align: right; font-size: 13.5px; color: #475569;">
+            <div>By <strong style="color: #081426; font-weight: 700;">Krosk Partners Desk</strong></div>
+            <time datetime="2023-07-05" style="color: #64748B; font-size: 12px;">Published July 5, 2023</time>
+          </div>
+        </div>
+
+        <div class="rt-article-body">
+          <div class="rt-pull-quote">
+            &ldquo;Market yesterday felt like a hangover from a wild party. We were there, we had fun, paid the bills and when we saw the bank statement, just couldn’t believe it.&rdquo;
+          </div>
+
+          <p style="margin-bottom: 18px;">
+            Market yesterday felt like a hangover from a wild party. We were there, we had fun, paid the bills and when we saw the bank statement, just couldn’t believe it. The rally has been immense on the back of the anticipated Jan 2022 bond maturity and coupons but felt overdone and we saw some reversal. But as I have always stated in this market, there is more money than investment opportunities, hence we might see some 20-50bps volatility, but we are not going anywhere. Most of the selling seems to be market-driven with clients on the sideline cherry-picking good bonds into the panic.
+          </p>
+
+          <p style="margin-bottom: 18px;">
+            With little to no CRR debit, the market is awash with liquidity but there seems to be a feeling the debit will be this week, a lack of which could potentially spur another leg of the rally.
+          </p>
+
+          <p style="margin-bottom: 18px;">
+            The short end of the curve remains largely bid with the 26s experiencing some correction, albeit conservatively. Most of the selling seems to be on the long end of the curve, 42s-50s. The belly of the curve 34s-37s still holding in well with relative value making it remain attractive and a seemingly large buyer.
+          </p>
+
+          <p style="margin-bottom: 24px;">
+            Today, we expect the buying trend to remain the same although I do not think we will see as many buyers of the long end as we saw yesterday. The real buyers seem to want a better compensation for the duration difference between the 37s and the 49s with the 42s not seemingly very attractive due to its availability at auction. Fundamentals of bond issuance, fuel subsidy, supplementary budgets and how far yields can move would be interesting topics to discuss, but as I said, we are still drinking espresso for our hangover.
+          </p>
+
+          <div style="font-family: 'Antonio', sans-serif; font-size: 16px; font-weight: 700; color: #086430; text-transform: uppercase;">
+            Good luck trading today.<br/>
+            Krosk Partners Limited
+          </div>
+        </div>
+      </article>
+
+
+      <!-- Article 4: WE GOING UP -->
+      <article class="rt-article-card" id="we-going-up">
+        <div class="rt-article-header">
+          <div>
+            <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 6px;">
+              <span style="display: inline-block; padding: 4px 12px; background: #081426; color: #FFE754; border-radius: 100px; font-family: 'Antonio', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">
+                Monetary Policy
+              </span>
+              <span style="font-size: 13px; color: #475569; text-transform: uppercase;">Central Bank Decisions</span>
+            </div>
+            <h2 class="rt-article-title">WE GOING UP, WE WANT THE WORLD TO KNOW, GOT TO LET MEFFY SHOW!!!</h2>
+          </div>
+          <div style="text-align: right; font-size: 13.5px; color: #475569;">
+            <div>By <strong style="color: #081426; font-weight: 700;">Olushola Adeniyi</strong></div>
+            <div style="color: #48bb78; font-weight: 600;">Inter-Dealer Broker</div>
+            <time datetime="2023-07-05" style="color: #64748B; font-size: 12px;">Published July 5, 2023</time>
+          </div>
+        </div>
+
+        <div class="rt-article-body">
+          <div class="rt-pull-quote">
+            &ldquo;Interest rate increased by 150bps to the highest it has been in more than two decades... Of a more significant immediate impact is the 500bps increase in CRR to be provisioned by Thursday at each bank.&rdquo;
+          </div>
+
+          <p style="margin-bottom: 18px;">
+            Was it expected? Yes. To this scale? Yes. Inflation has gone totally out of hand, and you can call it what it is, a global issue, so you cannot ignore it. Nigeria for the longest time has traded in isolation of the global markets given the substantial amount of local liquidity but we are now in unchartered territory. Interest rate increased by 150bps to the highest it has been in more than two decades.
+          </p>
+
+          <p style="margin-bottom: 18px;">
+            Of a more significant immediate impact is the 500bps increase in CRR to be provisioned by Thursday at each bank. This will result in the banks needing to raise about ₦2.5trn in short-term liquidity even though we opened 230bn short yesterday. This will be tough, and we would expect to see some ridiculous rates on the short end of the bills curve if at all there are any buyers. PMA today will be highly impacted by this liquidity event, and we don’t expect to see significant participations except from the asset managers. FD should see a more significant impact of this new policy as banks continue to struggle with naira liquidity.
+          </p>
+
+          <p style="margin-bottom: 18px;">
+            The UST 10yr crossed 4% for the first time since 2008, and the low-interest rate environment as we know it has shifted. Do we chase economic growth or fight inflation? This is the question everyone is facing, and the answer seems the same everywhere: the value of the currency cannot be left to be totally eroded by inflation. The increase in MPR was significant both for size and the tone in the follow up where he continued to reiterate the inability of the MPC to act in isolation with inflation going over the roof. This left room for continued MPR hikes if inflation cannot be reined in; this leaves the market in a bearish state with more uncertainty.
+          </p>
+
+          <p style="margin-bottom: 24px;">
+            Where do we reprice to? We would expect a minimum of 75-100bps revaluation on the 28s and beyond with the auction bonds probably suffering the most at around 100-200bps reprice. It will be a tough day to make markets, but we will be here working tirelessly to ensure swift and best execution when we see your mandates.
+          </p>
+
+          <div style="font-family: 'Antonio', sans-serif; font-size: 16px; font-weight: 700; color: #086430; text-transform: uppercase;">
+            What a roller coaster end to the week we have!!! Have fun trading and Goodluck!!!<br/>
+            Olushola Adeniyi &mdash; Inter-Dealer Broker
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 5: RESEARCH SUBSCRIPTION BOX
+       ========================================================================= -->
+  <section class="rt-inner-section-alt">
+    <div class="rt-inner-hero-container" style="max-width: 860px; text-align: center;">
+      <div class="rt-sub-text" style="color: #086430; margin-bottom: 10px;">INSTITUTIONAL SUBSCRIPTION</div>
+      <h2 class="rt-text-style-h2" style="margin-bottom: 16px;">
+        Receive Daily Fixed Income Runs &amp; Commentaries
+      </h2>
+      <p style="font-size: 16px; line-height: 1.6; color: var(--color--dark-khaki); margin-bottom: 32px;">
+        Delivered directly to institutional dealing desks, treasury officers, and chief investment officers prior to market open at 8:00 AM WAT.
+      </p>
+
+      <form style="display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;" onsubmit="event.preventDefault(); alert('Subscribed to KPL Daily Market Run.');">
+        <input type="email" placeholder="Enter institutional email address..." required class="rt-form-input" style="max-width: 440px;"/>
+        <button type="submit" class="rt-button">
+          <div class="rt-overflow-hidden">
+            <div class="rt-button-text-wrap">
+              <div class="rt-button-text">Subscribe to Desk Run</div>
+              
+            </div>
+          </div>
+          <img width="12" height="10" alt="arrow" src="assets/images/icons/680f17927db74a5da7dc5da5_Arrow 6 (1).svg" class="rt-button-arrow"/>
+        </button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 6: PRE-FOOTER CTA BANNER (Digitency Signature Element)
+       ========================================================================= -->
+  <section class="rt-crafting-v1">
+    <div class="rt-ideas-scroll-wrap">
+      <div class="rt-ideas-main">
+        <div class="w-layout-blockcontainer rt-container w-container">
+          <div class="rt-crafting-wrapper-v2">
+            
+            <div class="rt-crafting-heading-main">
+              <div class="rt-cta-eyebrow">CAPITAL MARKET RESEARCH & EXECUTION</div>
+              <h2 class="rt-heading-large">
+                Your Portfolio Deserves The Best! Let's Execute Extraordinary Yields
+              </h2>
+              <p class="rt-cta-subtitle">Direct institutional access to licensed debt brokers across FGN Bonds, T-Bills, Commercial Papers, and Nigerian Eurobonds. Rapid execution with zero information leakage.</p>
+            </div>
+
+            <div class="rt-crafting-arrow-box-main">
+              <button type="button" class="rt-button" data-open-rfq data-desk="Fixed Income">
+                <div class="rt-overflow-hidden">
+                  <div class="rt-button-text-wrap">
+                    <div class="rt-button-text">REQUEST RFQ RUN</div>
+                    
+                  </div>
+                </div>
+                <img width="16" height="14" alt="arrow" src="assets/images/icons/680f17927db74a5da7dc5da5_Arrow 6 (1).svg" class="rt-button-arrow"/>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Continuous Bottom Marquee Ticker -->
+        <div class="rt-marque-main-v2">
+          <div class="rt-marquee-content">
+            <div class="rt-marquee-text-main">
+              <div class="rt-marquee-text-block">FGN BONDS &bull; TREASURY BILLS &bull; COMMERCIAL PAPERS &bull; NIGERIAN EUROBONDS &bull; REPO FINANCING &bull; T+2 DVP SETTLEMENT &bull;&nbsp;</div>
+            </div>
+            <div class="rt-marquee-text-main" aria-hidden="true">
+              <div class="rt-marquee-text-block">FGN BONDS &bull; TREASURY BILLS &bull; COMMERCIAL PAPERS &bull; NIGERIAN EUROBONDS &bull; REPO FINANCING &bull; T+2 DVP SETTLEMENT &bull;&nbsp;</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 7: 4-COLUMN FOOTER (Digitency Style)
+       ========================================================================= -->
+  <footer class="rt-footer">
+    <div class="w-layout-blockcontainer rt-container w-container">
+      <div class="rt-footer-grid">
+        
+        <!-- Column 1: Brand Info & Address -->
+        <div>
+          <div class="rt-footer-brand-wrap" style="margin-bottom: 20px;">
+            <a href="index.html" class="krosk-nav-logo" aria-label="Krosk Partners Home">
+              <img src="assets/images/brand/krosk-logo-light.svg" alt="Krosk Partners Limited" class="krosk-nav-logo-img" width="300" height="46"/>
+            </a>
+          </div>
+          <p style="font-size: 14px; line-height: 1.6; color: #475569; margin-bottom: 16px;">
+            <strong>Headquarters &amp; Trading Floor:</strong><br/>
+            6, Tunde Fisayo Street, Off Babatunde Anjous Avenue,<br/>
+            Lekki Phase 1, Lagos, Nigeria.
+          </p>
+          <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: rgba(255, 231, 84, 0.1); border-radius: 100px; border: 1px solid rgba(255, 231, 84, 0.25);">
+            <span style="font-size: 12px; color: var(--color--golden-sun); font-weight: 600;">
+              Associate Member IDB &bull; FMDQ OTC Ecosystem
+            </span>
+          </div>
+        </div>
+
+        <!-- Column 2: Trading Desks -->
+        <div>
+          <h4 class="rt-footer-title">Trading Desks</h4>
+          <ul class="rt-footer-links">
+            <li><a href="services.html#bonds" class="rt-footer-link">Government &amp; Corporate Bonds</a></li>
+            <li><a href="services.html#tbills" class="rt-footer-link">Treasury Bills (NTBs &amp; OMO)</a></li>
+            <li><a href="services.html#moneymarket" class="rt-footer-link">Money Market &amp; Commercial Papers</a></li>
+            <li><a href="services.html#eurobonds" class="rt-footer-link">Nigerian Sovereign &amp; Corp Eurobonds</a></li>
+            <li><a href="index.html#calculator" class="rt-footer-link">FMDQ Yield &amp; Settlement Calculator</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Corporate Profile -->
+        <div>
+          <h4 class="rt-footer-title">Company</h4>
+          <ul class="rt-footer-links">
+            <li><a href="about.html" class="rt-footer-link">About KPL &amp; Leadership</a></li>
+            <li><a href="about.html#team" class="rt-footer-link">10 Executive Leaders</a></li>
+            <li><a href="about.html#governance" class="rt-footer-link">FMDQ Governance &amp; Ethics</a></li>
+            <li><a href="insights.html" class="rt-footer-link">CEO Market Intelligence</a></li>
+            <li><a href="contact.html" class="rt-footer-link">Contact &amp; Desk Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Operating Hours -->
+        <div>
+          <h4 class="rt-footer-title">Institutional Dealing</h4>
+          <p style="font-size: 14px; line-height: 1.6; color: #475569; margin-bottom: 8px;">
+            <strong>Telephone:</strong><br/>
+            <a href="tel:+2348038018023" style="color: var(--color--golden-sun); text-decoration: none;">+234 803 801 8023</a>
+          </p>
+          <p style="font-size: 14px; line-height: 1.6; color: #475569; margin-top: 14px;">
+            <strong>Institutional Email:</strong><br/>
+            <a href="mailto:Info@kroskpartners.com" style="color: var(--color--golden-sun); text-decoration: none;">Info@kroskpartners.com</a>
+          </p>
+          <p style="font-size: 12.5px; color: #7a7767; margin-top: 10px;">
+            Desk Hours: 8:00 AM – 5:00 PM WAT (Mon–Fri)
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="rt-footer-bottom">
+        <div>
+          &copy; 2026 Krosk Partners Limited. All rights reserved. Associate Member Inter-Dealer Broker (IDB).
+        </div>
+        <div style="font-size: 12px;">
+          Regulated under FMDQ OTC Securities Exchange &bull; Licensed in Nigeria &bull; Lekki Phase 1, Lagos
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =========================================================================
+       MODAL 1: REQUEST RFQ / TWO-WAY QUOTE
+       ========================================================================= -->
+  <div class="modal-overlay" id="rfqModal" role="dialog" aria-modal="true" aria-labelledby="rfqModalTitle">
+    <div class="modal-container">
+      <button type="button" class="modal-close-btn" id="rfqModalClose" aria-label="Close dialog">&times;</button>
+      
+      <div class="rt-sub-text" style="color: var(--color--krosk-green); margin-bottom: 6px;">FMDQ OTC INTER-DEALER BROKERAGE</div>
+      <h2 id="rfqModalTitle" style="margin-top: 0; font-size: 34px;">Request Two-Way Institutional Quote</h2>
+      <p style="font-size: 14px; color: var(--color--dark-khaki); margin-bottom: 24px;">
+        Transmissions are routed confidentially to our registered brokers on the Lekki Phase 1 trading floor.
+      </p>
+
+      <form id="rfqForm" style="display: flex; flex-direction: column; gap: 16px;">
+        <div>
+          <label style="display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Trading Desk</label>
+          <select id="rfqDeskSelect" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(44,37,0,0.2); background: #fff;">
+            <option value="Government & Corporate Bonds">Government &amp; Corporate Bonds Desk</option>
+            <option value="Treasury Bills (T-Bills)">Treasury Bills Desk (NTBs / OMO)</option>
+            <option value="Money Market & Commercial Papers">Money Market &amp; Commercial Papers</option>
+            <option value="Nigerian Eurobonds (USD)">Nigerian Eurobonds (USD)</option>
+          </select>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div>
+            <label style="display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Order Side</label>
+            <select id="rfqSide" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(44,37,0,0.2); background: #fff;">
+              <option value="Two-Way Run">Two-Way Quote (Bid &amp; Offer)</option>
+              <option value="Bid / Buy">Looking to BUY / Bid</option>
+              <option value="Offer / Sell">Looking to SELL / Offer</option>
+            </select>
+          </div>
+          <div>
+            <label style="display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Nominal Volume</label>
+            <input type="text" placeholder="e.g. ₦100,000,000" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(44,37,0,0.2); background: #fff;"/>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div>
+            <label style="display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Dealing Institution Name</label>
+            <input type="text" placeholder="Bank / PFA / Asset Manager" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(44,37,0,0.2); background: #fff;"/>
+          </div>
+          <div>
+            <label style="display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Trader / Treasurer Name</label>
+            <input type="text" placeholder="Your Full Name" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(44,37,0,0.2); background: #fff;"/>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div>
+            <label style="display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Institutional Email</label>
+            <input type="email" placeholder="trader@institution.com" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(44,37,0,0.2); background: #fff;"/>
+          </div>
+          <div>
+            <label style="display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Direct Desk Phone</label>
+            <input type="tel" placeholder="+234 ..." required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(44,37,0,0.2); background: #fff;"/>
+          </div>
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Specific Tenor / Maturity Notes</label>
+          <textarea rows="3" placeholder="Specify benchmark maturities, target yield spread, or settlement preference..." style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(44,37,0,0.2); background: #fff;"></textarea>
+        </div>
+
+        <div style="margin-top: 10px;">
+          <button type="submit" class="rt-button" style="width: 100%; justify-content: center;">
+            <div class="rt-overflow-hidden">
+              <div class="rt-button-text-wrap">
+                <div class="rt-button-text">Transmit RFQ to Trading Floor</div>
+                
+              </div>
+            </div>
+            <img width="12" height="10" alt="arrow" src="assets/images/icons/680f17927db74a5da7dc5da5_Arrow 6 (1).svg" class="rt-button-arrow"/>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Main Application Script -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

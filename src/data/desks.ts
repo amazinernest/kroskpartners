@@ -10,7 +10,6 @@ export interface TradingDesk {
   counterparties: string;
   instruments: string[];
   specs: { label: string; value: string }[];
-  image: string;
   rfqDeskName: string;
 }
 
@@ -39,7 +38,6 @@ export const TRADING_DESKS: TradingDesk[] = [
       { label: 'Quotation Mode', value: 'Clean Price & Yield-To-Maturity' },
       { label: 'Clearing Channel', value: 'CSCS DvP Settlement' }
     ],
-    image: '/assets/images/template/680f38633b7642f6f2622d86_Mask group (7).webp',
     rfqDeskName: 'Government & Corporate Bonds'
   },
   {
@@ -66,7 +64,6 @@ export const TRADING_DESKS: TradingDesk[] = [
       { label: 'Clearing Engine', value: 'Central Securities Clearing System (CSCS)' },
       { label: 'Regulatory Body', value: 'FMDQ OTC / CBN Supervised' }
     ],
-    image: '/assets/images/template/68148ca0110f6ed70f17d065_service-image-1.webp',
     rfqDeskName: 'Treasury Bills'
   },
   {
@@ -93,7 +90,6 @@ export const TRADING_DESKS: TradingDesk[] = [
       { label: 'Affirmation Protocol', value: 'FMDQ OTC Commercial Paper Registry' },
       { label: 'Clearing Channels', value: 'CSCS & Commercial Settlement Banks' }
     ],
-    image: '/assets/images/template/68148ca03163f4f612807695_service-image-2.webp',
     rfqDeskName: 'Money Market & Commercial Papers'
   },
   {
@@ -120,7 +116,6 @@ export const TRADING_DESKS: TradingDesk[] = [
       { label: 'Execution Protocol', value: 'STP Messaging & Direct Desk Voice' },
       { label: 'Benchmark Maturities', value: '2025, 2027, 2031, 2038, 2047, 2051' }
     ],
-    image: '/assets/images/template/68148ca059644118f03ecd29_service-image-4.webp',
     rfqDeskName: 'Nigerian Eurobonds (USD)'
   }
 ];

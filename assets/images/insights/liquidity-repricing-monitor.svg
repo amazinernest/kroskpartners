@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" width="100%" height="100%">
+  <defs>
+    <linearGradient id="headerGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#081426" />
+      <stop offset="100%" stop-color="#162E52" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="480" height="260" fill="#F8FAFC" rx="12" />
+  <rect x="0.5" y="0.5" width="479" height="259" fill="none" stroke="#E2E8F0" rx="11.5" />
+
+  <!-- Top Institutional Bar -->
+  <rect x="0" y="0" width="480" height="42" fill="url(#headerGrad3)" rx="12 12 0 0" />
+  <text x="20" y="26" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" letter-spacing="0.08em">INTERBANK LIQUIDITY &amp; REPRICING MONITOR</text>
+  <rect x="345" y="11" width="115" height="20" rx="10" fill="#086430" />
+  <text x="402.5" y="25" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="9.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">MATURITY INFLOW</text>
+
+  <!-- Subtitle -->
+  <text x="20" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11.5" font-weight="600" fill="#081426">Jan Bond Maturity &amp; Coupon Reinvestment Flow</text>
+  <text x="460" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" font-weight="700" fill="#086430" text-anchor="end">Volatility: 20-50 bps</text>
+
+  <!-- Grid Comparison Cards -->
+  <!-- Col 1: Short End (26s) -->
+  <rect x="20" y="78" width="138" height="114" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+  <rect x="20" y="78" width="138" height="26" rx="8 8 0 0" fill="#EEF4FB" />
+  <text x="89" y="95" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#081426" text-anchor="middle">SHORT END (26s)</text>
+  <text x="89" y="122" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="800" fill="#086430" text-anchor="middle">HEAVILY BID</text>
+  <text x="89" y="140" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">Conservative correction</text>
+  <text x="89" y="154" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">MTM: 11.00% &#8594; 11.65%</text>
+  <rect x="34" y="165" width="110" height="18" rx="4" fill="#EDF7F1" />
+  <text x="89" y="177" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" font-weight="700" fill="#086430" text-anchor="middle">BEST VALUE PICK</text>
+
+  <!-- Col 2: Belly (34s-37s) -->
+  <rect x="171" y="78" width="138" height="114" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+  <rect x="171" y="78" width="138" height="26" rx="8 8 0 0" fill="#EEF4FB" />
+  <text x="240" y="95" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#081426" text-anchor="middle">BELLY (34s - 37s)</text>
+  <text x="240" y="122" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="800" fill="#081426" text-anchor="middle">HOLDING FIRM</text>
+  <text x="240" y="140" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">Relative value appeal</text>
+  <text x="240" y="154" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">Institutional buyers</text>
+  <rect x="185" y="165" width="110" height="18" rx="4" fill="#EEF4FB" />
+  <text x="240" y="177" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" font-weight="700" fill="#081426" text-anchor="middle">DURATION BUFFER</text>
+
+  <!-- Col 3: Long End (42s-50s) -->
+  <rect x="322" y="78" width="138" height="114" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+  <rect x="322" y="78" width="138" height="26" rx="8 8 0 0" fill="#EEF4FB" />
+  <text x="391" y="95" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#081426" text-anchor="middle">LONG END (42s - 50s)</text>
+  <text x="391" y="122" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="800" fill="#DC2626" text-anchor="middle">SELLER REVERSAL</text>
+  <text x="391" y="140" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">Auction supply overhang</text>
+  <text x="391" y="154" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">Cherry-picking dips</text>
+  <rect x="336" y="165" width="110" height="18" rx="4" fill="#FEE2E2" />
+  <text x="391" y="177" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" font-weight="700" fill="#DC2626" text-anchor="middle">DURATION RISK</text>
+
+  <!-- Bottom Liquidity Status Bar -->
+  <rect x="20" y="204" width="440" height="42" rx="8" fill="#081426" />
+  <text x="32" y="222" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#FFFFFF">MARKET AWASH WITH COUPON LIQUIDITY</text>
+  <text x="32" y="236" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" fill="#94A3B8">Anticipated CRR debits may spur secondary rally • Side-line cherry picking</text>
+  <rect x="360" y="212" width="90" height="26" rx="6" fill="#086430" />
+  <text x="405" y="228" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">NET BID CASH</text>
+</svg>

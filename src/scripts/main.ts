@@ -109,10 +109,10 @@ function initLagosMarketClock(): void {
     const isOpen = isWeekday && lagosHour >= 8 && lagosHour < 17;
 
     clockEl!.innerHTML = `
-      <span class="live-dot" style="background-color: ${isOpen ? 'var(--color-emerald)' : 'var(--color-gold-dark)'};"></span>
+      <span class="live-dot" style="background-color: ${isOpen ? 'var(--color-emerald)' : '#94A3B8'};"></span>
       <span style="font-weight: 700; color: var(--text-primary);">LAGOS: ${timeStr} WAT</span>
       <span style="color: rgba(0,0,0,0.18);">|</span>
-      <span style="font-weight: 800; color: ${isOpen ? 'var(--color-emerald-deep)' : 'var(--color-gold-dark)'};">
+      <span style="font-weight: 800; color: ${isOpen ? 'var(--color-emerald)' : 'var(--color-navy)'};">
         ${isOpen ? 'OTC MARKET OPEN' : 'OTC CLOSE (INDICATIVE)'}
       </span>
     `;

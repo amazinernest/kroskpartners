@@ -1,0 +1,10 @@
+<svg width="960" height="154" viewBox="0 0 960 154" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left Wing -->
+  <polygon points="0,19 400,19 400,152 349,137 349,67 136,67" fill="#086430" />
+  <!-- Right Wing -->
+  <polygon points="960,19 560,19 560,152 611,137 611,67 824,67" fill="#086430" />
+  <!-- Center Chevron Roof & Legs -->
+  <path d="M480,2 L401,70 L401,150 L409,145 L409,74 L480,14 L551,74 L551,145 L559,150 L559,70 Z" fill="#040910" />
+  <!-- Lower Chevron V -->
+  <path d="M480,74 L409,145 L415,150 L480,85 L545,150 L551,145 Z" fill="#040910" />
+</svg>

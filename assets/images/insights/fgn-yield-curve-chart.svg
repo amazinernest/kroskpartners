@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" width="100%" height="100%">
+  <defs>
+    <linearGradient id="curveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#086430" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#086430" stop-opacity="0.0" />
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#081426" />
+      <stop offset="100%" stop-color="#162E52" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="480" height="260" fill="#F8FAFC" rx="12" />
+  <rect x="0.5" y="0.5" width="479" height="259" fill="none" stroke="#E2E8F0" rx="11.5" />
+
+  <!-- Top Institutional Bar -->
+  <rect x="0" y="0" width="480" height="42" fill="url(#headerGrad)" rx="12 12 0 0" />
+  <text x="20" y="26" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" letter-spacing="0.08em">FGN SOVEREIGN BENCHMARK YIELD CURVE</text>
+  <rect x="365" y="11" width="95" height="20" rx="10" fill="#086430" />
+  <text x="412" y="25" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="9.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">ACTIVE DESK RUN</text>
+
+  <!-- Chart Metadata Subheader -->
+  <text x="20" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11.5" font-weight="600" fill="#081426">Short-Duration Pair Trade: Short 50s vs Long 36s</text>
+  <text x="460" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" font-weight="700" fill="#086430" text-anchor="end">Spread: +35 bps</text>
+
+  <!-- Grid Lines -->
+  <line x1="50" y1="90" x2="450" y2="90" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,3" />
+  <text x="42" y="94" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#94A3B8" text-anchor="end">16%</text>
+
+  <line x1="50" y1="130" x2="450" y2="130" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,3" />
+  <text x="42" y="134" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#94A3B8" text-anchor="end">14%</text>
+
+  <line x1="50" y1="170" x2="450" y2="170" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,3" />
+  <text x="42" y="174" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#94A3B8" text-anchor="end">12%</text>
+
+  <line x1="50" y1="210" x2="450" y2="210" stroke="#CBD5E1" stroke-width="1" />
+  <text x="42" y="214" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#94A3B8" text-anchor="end">10%</text>
+
+  <!-- X-Axis Labels -->
+  <text x="80" y="228" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle">2Y (26s)</text>
+  <text x="150" y="228" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle">5Y (28s)</text>
+  <text x="220" y="228" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle">10Y (34s)</text>
+  <text x="290" y="228" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle">15Y (37s)</text>
+  <text x="360" y="228" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle">20Y (42s)</text>
+  <text x="430" y="228" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle">30Y (50s)</text>
+
+  <!-- Curve Fill and Stroke -->
+  <!-- Coordinates: 
+       80, 177 (11.65%)
+       150, 166 (12.20%)
+       220, 153 (12.85%)
+       290, 147 (13.15%)
+       360, 131 (13.95%)
+       430, 114 (14.80%)
+  -->
+  <path d="M 80,177 C 120,172 170,162 220,153 C 270,144 320,138 360,131 C 390,125 410,118 430,114 L 430,210 L 80,210 Z" fill="url(#curveGradient)" />
+  <path d="M 80,177 C 120,172 170,162 220,153 C 270,144 320,138 360,131 C 390,125 410,118 430,114" fill="none" stroke="#086430" stroke-width="3.5" stroke-linecap="round" />
+
+  <!-- Data Points -->
+  <circle cx="80" cy="177" r="5" fill="#FFFFFF" stroke="#081426" stroke-width="2.5" />
+  <rect x="52" y="146" width="56" height="18" rx="4" fill="#081426" />
+  <text x="80" y="159" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">11.65%</text>
+
+  <circle cx="290" cy="147" r="4" fill="#FFFFFF" stroke="#086430" stroke-width="2" />
+
+  <circle cx="430" cy="114" r="5" fill="#FFFFFF" stroke="#086430" stroke-width="2.5" />
+  <rect x="402" y="83" width="56" height="18" rx="4" fill="#086430" />
+  <text x="430" y="96" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">14.80%</text>
+
+  <!-- Bottom Ticker Strip -->
+  <rect x="20" y="240" width="440" height="14" rx="4" fill="#EEF4FB" />
+  <text x="240" y="250.5" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" fill="#081426" text-anchor="middle">AUCTION ANALYSIS: DMO CONTINUES OVERSELLING • MORE MONEY THAN INSTRUMENTS</text>
+</svg>

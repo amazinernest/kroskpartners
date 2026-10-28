@@ -11,7 +11,7 @@ const { isStandalone = false } = Astro.props;
     <!-- Header -->
     <div class="calc-header">
       <div>
-        <div class="badge-eyebrow gold">
+        <div class="badge-eyebrow">
           <span class="badge-pill-dot"></span>
           FMDQ BENCHMARK MATHEMATICS
         </div>
@@ -185,7 +185,7 @@ const { isStandalone = false } = Astro.props;
           <div class="metrics-breakdown">
             <div class="metric-row">
               <span class="metric-label">Estimated Settlement Consideration</span>
-              <span class="metric-val highlight-gold" id="calcMetricConsideration">₦ 89,130,556</span>
+              <span class="metric-val highlight-navy" id="calcMetricConsideration">₦ 89,130,556</span>
             </div>
 
             <div class="metric-row">
@@ -431,8 +431,9 @@ const { isStandalone = false } = Astro.props;
     color: var(--text-primary);
   }
 
+  .highlight-navy,
   .highlight-gold {
-    color: var(--color-gold-dark);
+    color: var(--color-navy);
   }
 
   .calc-action-wrap {

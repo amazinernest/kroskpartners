@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" width="100%" height="100%">
+  <defs>
+    <linearGradient id="headerGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#081426" />
+      <stop offset="100%" stop-color="#162E52" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="480" height="260" fill="#F8FAFC" rx="12" />
+  <rect x="0.5" y="0.5" width="479" height="259" fill="none" stroke="#E2E8F0" rx="11.5" />
+
+  <!-- Top Institutional Bar -->
+  <rect x="0" y="0" width="480" height="42" fill="url(#headerGrad4)" rx="12 12 0 0" />
+  <text x="20" y="26" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" letter-spacing="0.08em">CENTRAL BANK OF NIGERIA POLICY SHOCK</text>
+  <rect x="350" y="11" width="110" height="20" rx="10" fill="#DC2626" />
+  <text x="405" y="25" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="9.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">HAWKISH CYCLE</text>
+
+  <!-- Subtitle -->
+  <text x="20" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11.5" font-weight="600" fill="#081426">Historic 2-Decade High Rate Decision &amp; Reserve Shock</text>
+  <text x="460" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" font-weight="700" fill="#DC2626" text-anchor="end">Bearish Curve Shift</text>
+
+  <!-- 2 Metric Display Columns -->
+  <!-- Box 1: Monetary Policy Rate (MPR) -->
+  <rect x="20" y="78" width="212" height="112" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+  <rect x="20" y="78" width="212" height="26" rx="8 8 0 0" fill="#EEF4FB" />
+  <text x="126" y="95" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#081426" text-anchor="middle">MONETARY POLICY RATE (MPR)</text>
+  <text x="126" y="132" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="800" fill="#081426" text-anchor="middle">+150 <tspan font-size="14" font-weight="600">BPS</tspan></text>
+  <rect x="46" y="148" width="160" height="20" rx="4" fill="#EDF7F1" />
+  <text x="126" y="162" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="700" fill="#086430" text-anchor="middle">HIGHEST IN OVER 20 YEARS</text>
+
+  <!-- Box 2: Cash Reserve Ratio (CRR) -->
+  <rect x="248" y="78" width="212" height="112" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+  <rect x="248" y="78" width="212" height="26" rx="8 8 0 0" fill="#FEE2E2" />
+  <text x="354" y="95" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#DC2626" text-anchor="middle">CASH RESERVE RATIO (CRR)</text>
+  <text x="354" y="132" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="800" fill="#DC2626" text-anchor="middle">+500 <tspan font-size="14" font-weight="600">BPS</tspan></text>
+  <rect x="274" y="148" width="160" height="20" rx="4" fill="#FEE2E2" />
+  <text x="354" y="162" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="700" fill="#DC2626" text-anchor="middle">₦2.5TRN LIQUIDITY DRAIN</text>
+
+  <!-- Bottom Liquidity Impact Bar -->
+  <rect x="20" y="202" width="440" height="44" rx="8" fill="#081426" />
+  <text x="32" y="220" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#FFFFFF">MARKET IMPACT: 75–100 BPS REVALUATION ON 28s &amp; BEYOND</text>
+  <text x="32" y="235" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" fill="#94A3B8">Auction bonds reprice 100–200 bps • Krosk Partners provides continuous two-way execution</text>
+  <rect x="360" y="210" width="90" height="28" rx="6" fill="#086430" />
+  <text x="405" y="227" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">FMDQ BEST-EX</text>
+</svg>
